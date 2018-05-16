@@ -26,11 +26,11 @@ $channelSecret = getenv('LINE_CHANNEL_SECRET');
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
-        case 'message':
-            $message = $event['message'];
+        case '123':
+            $message =123;
             switch ($message['type']) {
                 case 'text':
-                	$m_message = $message['text'];
+                	$m_message = '在講就打斷你的腿';
                 	if($m_message!="")
                 	{
                 		$client->replyMessage(array(
