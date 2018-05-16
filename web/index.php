@@ -29,8 +29,8 @@ foreach ($client->parseEvents() as $event) {
         case '123':
             $message =123;
             switch ($message['type']) {
-                case 'text':
-                	$m_message = '在講就打斷你的腿';
+                 case 'message':
+                	$m_message = 123456;
                 	if($m_message!="")
                 	{
                 		$client->replyMessage(array(
