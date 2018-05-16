@@ -16,7 +16,7 @@
  * under the License.
  */
 
-/*require_once('./LINEBotTiny.php');
+require_once('./LINEBotTiny.php');
 
 
 
@@ -34,7 +34,7 @@ foreach ($client->parseEvents() as $event) {
                 	if($m_message!="")
                 	{
                 		$client->replyMessage(array(
-                        'replyToken' => $event['replyToken'],
+                        'replyToken' => '456',  //$event['replyToken']
                         'messages' => array(
                             array(
                                 'type' => 'text',
@@ -51,4 +51,4 @@ foreach ($client->parseEvents() as $event) {
             error_log("Unsupporeted event type: " . $event['type']);
             break;
     }
-};*/
+};
