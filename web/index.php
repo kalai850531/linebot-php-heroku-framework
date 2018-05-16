@@ -31,10 +31,14 @@ foreach ($client->parseEvents() as $event) {
         case 'message':
             $message = $event['message'];
             switch ($message['type']) {
-                case '曲真儀'
-                    $m_message = $b;
                 case 'text':
+                    if('text'=='曲真儀'){
+                        $m_message = $b;
+                        }
+                    else{
                 	$m_message = $a;
+                    }
+                    break;
                 	if($m_message!="")
                 	{
                 		$client->replyMessage(array(
