@@ -23,17 +23,15 @@ require_once('./LINEBotTiny.php');
 
 $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
-$a="幹你娘";
-$b="馬的北七";
+$b="幹你娘,打斷你的腿";
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
-foreach ($client->parseEvents() as ) {
+foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
         case 'message':
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
-                	$m_message = $a;
-         
+                	$m_message = $b;
                 	if($m_message!="")
                 	{
                 		$client->replyMessage(array(
