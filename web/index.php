@@ -26,13 +26,13 @@ $channelSecret = getenv('LINE_CHANNEL_SECRET');
 $a="幹你娘";
 $b="馬的北七";
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
-foreach ($client->parseEvents() as $event) {
+foreach ($client->parseEvents() as ) {
     switch ($event['type']) {
         case 'message':
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
-                    if('text'=='曲真儀'){
+                    if($message=='曲真儀'){
                         $m_message = $b;
                         }
                     else{
