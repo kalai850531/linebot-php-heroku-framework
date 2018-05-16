@@ -34,7 +34,7 @@ foreach ($client->parseEvents() as $event) {
                 	if($m_message!="")
                 	{
                 		$client->replyMessage(array(
-                        'replyToken' => '456',  //$event['replyToken']
+                        'replyToken' =>$event['replyToken'],  //
                         'messages' => array(
                             array(
                                 'type' => 'text',
