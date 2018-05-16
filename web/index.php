@@ -16,7 +16,7 @@
  * under the License.
  */
 
-require_once('./LINEBotTiny.php');
+/*require_once('./LINEBotTiny.php');
 
 
 
@@ -51,4 +51,4 @@ foreach ($client->parseEvents() as $event) {
             error_log("Unsupporeted event type: " . $event['type']);
             break;
     }
-};
+};*/
