@@ -38,7 +38,6 @@ foreach ($client->parseEvents() as $event) {
                     else{
                 	$m_message = $a;
                     }
-                    break;
                 	if($m_message!="")
                 	{
                 		$client->replyMessage(array(
