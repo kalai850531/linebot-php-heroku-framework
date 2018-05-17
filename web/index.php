@@ -30,9 +30,6 @@ foreach ($client->parseEvents() as $event) {
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
-                    if($message['text']=="我"){
-                        $m_message="我什麼我,屌你簍母,仆街";
-                    }
                     switch($bbbb){
                         case '0':
                             $m_message=$message['text'];
@@ -49,6 +46,9 @@ foreach ($client->parseEvents() as $event) {
                            case '4':
                             $m_message="躺在樹下的操場尋找紅心A";
                           break;
+                    }
+                    if($message['text']=="我"){
+                        $m_message="我什麼我,屌你簍母,仆街";
                     }
                 	if($m_message!="")
                 	{
