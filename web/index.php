@@ -96,8 +96,8 @@ foreach ($client->parseEvents() as $event) { //接收憑證
                         'replyToken' => $event['replyToken'],
                         'messages' => array(
                             array(
-                                'type' => 'text',
-                                'text' => $m_message
+                                'type' => 'image',
+                                'text' => 'https://api.reh.tw/line/bot/example/assets/images/example.jpg'
                             )
                         )
                     	));
