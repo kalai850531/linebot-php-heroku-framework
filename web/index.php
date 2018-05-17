@@ -40,6 +40,12 @@ foreach ($client->parseEvents() as $event) {
                         case '2':
                             $m_message="羅天祥賣屁股";
                           break;
+                         case '3':
+                            $m_message="在光頭葛格的紅色內褲裡";
+                          break;    
+                           case '4':
+                            $m_message="躺在樹下的操場尋找紅心A";
+                          break;
                     }
                 	if($m_message!="")
                 	{
