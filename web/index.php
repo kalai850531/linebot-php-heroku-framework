@@ -50,6 +50,23 @@ foreach ($client->parseEvents() as $event) {
                     if($message['text']=="我"||$message['text']=="主系選修"){
                         $m_message="電子商務概論,行銷管理,服務創新概論.消費者行為,網路行銷,網路廣告";
                     }
+                    if($message['text']=="屌你老母"||$message['text']=="港仔"){
+                        $m_message="情與義　值千金
+                        刀山去　地獄去　有何憾
+                        為知心　犧牲有何憾
+                        為嬌娃　甘心剖寸心
+                        血淚為情流
+                        一死會有恨
+                        有誰人　敢過問
+                        塵世上　相識是緣份
+                        盡杯酒　千杯怎醉君
+                        野鶴逐閒雲
+                        生死怎過問
+                        笑由人　誰過問
+                        野鶴逐閒雲
+                        生死怎問
+                        笑由人　誰過問誰過問";
+                    }
                 	if($m_message!="")
                 	{
                 		$client->replyMessage(array(
