@@ -23,7 +23,7 @@ $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 　"1"=>"牛蛙妹妹",
 　"2"=>"紅心A"
 );*/
-$bbbb=rand(0,4);
+$bbbb=rand(0,0);
 foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
         case 'message':
@@ -32,7 +32,7 @@ foreach ($client->parseEvents() as $event) {
                 case 'text':
                     switch($bbbb){
                         case '0':
-                            $m_message="高振偉王八蛋";
+                            $m_message=$message;
                          break;
                         case '1':
                             $m_message="幹你詹凱威";
