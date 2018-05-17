@@ -38,14 +38,6 @@ foreach ($client->parseEvents() as $event) {
                              )
                            )
                          }
-                         else{
-                            'messages' => array(
-                            array(
-                                'type' => 'text',
-                                'text' => $m_message
-                            )
-                        )
-                         }
                     	));
                 	}
                     break;
