@@ -28,6 +28,8 @@ foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
         case 'message':
             $message = $event['message'];
+            switch ($message['type']) {
+                case 'text':
                     if($message['text']=="我"||$message['text']=="主系選修"){
                         $m_message="電子商務概論,行銷管理,服務創新概論.消費者行為,網路行銷,網路廣告";
                     }
@@ -52,8 +54,6 @@ foreach ($client->parseEvents() as $event) {
                      $m_message="是北七";
                     } 
                     else{
-                                    switch ($message['type']) {
-                case 'text':
                     switch($bbbb){
                         case '0':
                             $m_message=$message['text'];
@@ -71,7 +71,7 @@ foreach ($client->parseEvents() as $event) {
                             $m_message="躺在樹下的操場尋找紅心A";
                           break;
                     }
-                    }
+                 }
                     
                 	if($m_message!="")
                 	{
