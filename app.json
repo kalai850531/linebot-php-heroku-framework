@@ -10,6 +10,10 @@
     "LINE_CHANNEL_ACCESSTOKEN": {
       "description": "LINE Channel Accesstoken(Should issued first)"
     }
-    
+    {
+    "type": "image",
+    "originalContentUrl": "https://api.reh.tw/line/bot/example/assets/images/example.jpg",
+    "previewImageUrl": "https://api.reh.tw/line/bot/example/assets/images/example.jpg"
+    }
   }
 }
