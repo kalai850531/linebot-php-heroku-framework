@@ -30,7 +30,17 @@ foreach ($client->parseEvents() as $event) {
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
-                	$m_message = $bbbb;
+                    switch($bbbb){
+                        case '0':
+                            $m_message="高振偉王八蛋";
+                         break;
+                        case '1':
+                            $m_message="幹你詹凱威";
+                         break;
+                        case '2':
+                            $m_message="羅天祥賣屁股";
+                          break;
+                    }
                 	if($m_message!="")
                 	{
                 		$client->replyMessage(array(
