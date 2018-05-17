@@ -30,7 +30,7 @@ foreach ($client->parseEvents() as $event) {
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
-                    if($message['text']){
+                    if($message['text']=="我"){
                         $m_message="我什麼我,屌你簍母,仆街";
                     }
                     switch($bbbb){
