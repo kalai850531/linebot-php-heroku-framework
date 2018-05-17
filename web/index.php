@@ -70,7 +70,7 @@ foreach ($client->parseEvents() as $event) {
                     else if (stripos($message['text'], "曲真儀")!=false){   //stripos("Hello world!","WO") ;
                      $m_message="是北七";
                     } 
-                     $m_message=stripos($message['text'], "曲真儀");
+                     $m_message=stripos($message['text'], "a");
                 	if($m_message!="")
                 	{
                 		$client->replyMessage(array(
