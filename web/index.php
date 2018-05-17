@@ -28,25 +28,6 @@ foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
         case 'message':
             $message = $event['message'];
-            switch ($message['type']) {
-                case 'text':
-                    switch($bbbb){
-                        case '0':
-                            $m_message=$message['text'];
-                         break;
-                        case '1':
-                            $m_message="幹你詹凱威";
-                         break;
-                        case '2':
-                            $m_message="羅天祥賣屁股";
-                          break;
-                         case '3':
-                            $m_message="在光頭葛格的紅色內褲裡";
-                          break;    
-                           case '4':
-                            $m_message="躺在樹下的操場尋找紅心A";
-                          break;
-                    }
                     if($message['text']=="我"||$message['text']=="主系選修"){
                         $m_message="電子商務概論,行銷管理,服務創新概論.消費者行為,網路行銷,網路廣告";
                     }
@@ -70,6 +51,28 @@ foreach ($client->parseEvents() as $event) {
                     else if (stripos($message['text'],"曲真儀")>=0){   //stripos("Hello world!","WO") ;
                      $m_message="是北七";
                     } 
+                    else{
+                                    switch ($message['type']) {
+                case 'text':
+                    switch($bbbb){
+                        case '0':
+                            $m_message=$message['text'];
+                         break;
+                        case '1':
+                            $m_message="幹你詹凱威";
+                         break;
+                        case '2':
+                            $m_message="羅天祥賣屁股";
+                          break;
+                         case '3':
+                            $m_message="在光頭葛格的紅色內褲裡";
+                          break;    
+                           case '4':
+                            $m_message="躺在樹下的操場尋找紅心A";
+                          break;
+                    }
+                    }
+                    
                 	if($m_message!="")
                 	{
                 		$client->replyMessage(array(
