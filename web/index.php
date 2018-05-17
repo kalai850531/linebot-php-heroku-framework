@@ -18,19 +18,19 @@ require_once('./LINEBotTiny.php');
 $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
-$a=array(
+/*$a=array(
 　"0"=>"葛格",
 　"1"=>"牛蛙妹妹",
 　"2"=>"紅心A"
-);
-$b=rand(0,4);
+);*/
+$bbbb=rand(0,4);
 foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
         case 'message':
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
-                	$m_message =$b;
+                	$m_message =$bbbbb;
                 	if($m_message!="")
                 	{
                 		$client->replyMessage(array(
