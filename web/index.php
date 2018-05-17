@@ -50,7 +50,7 @@ foreach ($client->parseEvents() as $event) {
                     if($message['text']=="我"||$message['text']=="主系選修"){
                         $m_message="電子商務概論,行銷管理,服務創新概論.消費者行為,網路行銷,網路廣告";
                     }
-                    if($message['text']=="屌你老母"||$message['text']=="港仔"){
+                    else if($message['text']=="屌你老母"||$message['text']=="港仔"){
                         $m_message="情與義　值千金
                         刀山去　地獄去　有何憾
                         為知心　犧牲有何憾
@@ -67,7 +67,7 @@ foreach ($client->parseEvents() as $event) {
                         生死怎問
                         笑由人　誰過問誰過問";
                     }
-                    else if (strpos($message['text'], "曲真儀")!=){
+                    else if (strpos($message['text'], "曲真儀")!=false){
                      $m_message="是北七";
                     } 
                 	if($m_message!="")
