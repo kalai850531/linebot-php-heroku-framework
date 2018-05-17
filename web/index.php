@@ -89,7 +89,18 @@ foreach ($client->parseEvents() as $event) { //接收憑證
                           break;
                     }
                  }
-                    
+                    if (strtolower($message['text']) == "image" || $message['text'] == "圖片"){
+                        $client->replyMessage(array(
+                                         'replyToken' => $event['replyToken'],
+                                        'messages' => array(
+                                   array(
+                   'type' => 'image', // 訊息類型 (圖片)
+                'originalContentUrl' => 'https://api.reh.tw/line/bot/example/assets/images/example.jpg', // 回復圖片
+                'previewImageUrl' => 'https://api.reh.tw/line/bot/example/assets/images/example.jpg' // 回復的預覽圖片
+            )
+        )
+    ));
+                    }
                 	if($m_message!="")
                 	{
                 		$client->replyMessage(array(
@@ -97,7 +108,7 @@ foreach ($client->parseEvents() as $event) { //接收憑證
                         'messages' => array(
                             array(
                                 'type' => 'image',
-                                'text' => 'https://api.reh.tw/line/bot/example/assets/images/example.jpg'
+                                'text' => $m_message
                             )
                         )
                     	));
