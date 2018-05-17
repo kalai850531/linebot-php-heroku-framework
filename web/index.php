@@ -67,7 +67,7 @@ foreach ($client->parseEvents() as $event) {
                         生死怎問
                         笑由人　誰過問誰過問";
                     }
-                    else if (stripos($message['text'],"2")!=false){   //stripos("Hello world!","WO") ;
+                    else if (stripos($message['text'],"曲真儀")!=false){   //stripos("Hello world!","WO") ;
                      $m_message="是北七";
                     } 
                 	if($m_message!="")
