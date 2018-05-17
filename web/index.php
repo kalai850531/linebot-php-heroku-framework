@@ -50,9 +50,9 @@ foreach ($client->parseEvents() as $event) {
                         生死怎問
                         笑由人　誰過問誰過問";
                     }
-                   /* else if (stripos($message['text'],"曲真儀")>0)){   //stripos("Hello world!","WO") ;
+                    else if (stripos($message['text'],"曲真儀")!="")){   //stripos("Hello world!","WO") ;
                      $m_message=strripos($message['text'],"曲真儀")."<-第一次,最後一次->".stripos($message['text'],"曲真儀");
-                    } */
+                    } 
                     else{
                     switch($bbbb){
                         case '0':
