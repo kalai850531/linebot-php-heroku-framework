@@ -43,7 +43,7 @@ foreach ($client->parseEvents() as $event) {
                          else if($message['text']=="yee"){
                             $m_message="你講話最好給我小心一點";
                             }
-                        else if($message['text']=="yee"){
+                        else if($message['text']=="甲偉"){
                             $m_message="異形,沒有啦,靠北哦";
                             }
                     }
