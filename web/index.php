@@ -23,13 +23,14 @@ $a=array(
 　"1"=>"牛蛙妹妹",
 　"2"=>"紅心A"
 );
+$b=rand(0,4);
 foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
         case 'message':
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
-                	$m_message = $a[rand(0,4)];
+                	$m_message =$b;
                 	if($m_message!="")
                 	{
                 		$client->replyMessage(array(
