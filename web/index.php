@@ -31,14 +31,17 @@ foreach ($client->parseEvents() as $event) {
                         
                 		$client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
-                        if($message['text']!="主系選修"){
+                        
                         'messages' => array(
+                            
                             array(
+                                if($message['text']!="主系選修"){
                                 'type' => 'text',
                                 'text' => $m_message
+                                }
                             )
                          )
-                        }
+                       
                     	));
                 	}
                     break;
