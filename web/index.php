@@ -29,14 +29,13 @@ $a=array(
   3=>"紅心A",
   4=>"情與義,值千金,刀山去,地獄去,有何憾"
 );
-$client = new LINEBotTiny($channelAccessToken, $channelSecret);
 foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
         case 'message':
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
-                	$m_message = $a[rand(0,4)];
+                	$m_message = $message['text'];
                 	if($m_message!="")
                 	{
                 		$client->replyMessage(array(
