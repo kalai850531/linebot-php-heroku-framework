@@ -34,10 +34,10 @@ foreach ($client->parseEvents() as $event) {
                         $m_message="電子商務概論,行銷管理,服務創新概論.消費者行為,網路行銷,網路廣告";
                     }
                     else if($message['text']=="我是老二"||$message['text']=="嘎嘎"){
-                        if($m_message['text']=="我是老二"){
+                        if($message['text']=="我是老二"){
                         $m_message="我是低能兒";
                         }
-                        else if($m_message['text']=="嘎嘎"){
+                        else if($message['text']=="嘎嘎"){
                             $m_message="幹你嘎嘎";
                             }
                     }
