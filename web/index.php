@@ -32,7 +32,7 @@ foreach ($client->parseEvents() as $event) {
                 case 'text':
                     switch($bbbb){
                         case '0':
-                            $m_message="閉嘴啦臭鮑魚";
+                            $m_message=$event;
                          break;
                         case '1':
                             $m_message="幹你詹凱威";
