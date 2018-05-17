@@ -47,12 +47,9 @@ foreach ($client->parseEvents() as $event) {
                             $m_message="躺在樹下的操場尋找紅心A";
                           break;
                     }
-                    if($message['text']=="我"){
-                        $m_message="我什麼我,屌你簍母,仆街";
-                    }
-                    if($message['text']=="主系選修")(
+                    if($message['text']=="我"||$message['text']=="主系選修"){
                         $m_message="電子商務概論,行銷管理,服務創新概論.消費者行為,網路行銷,網路廣告";
-                    )
+                    }
                 	if($m_message!="")
                 	{
                 		$client->replyMessage(array(
