@@ -51,7 +51,7 @@ foreach ($client->parseEvents() as $event) {
                         笑由人　誰過問誰過問";
                     }
                     else if (stripos($message['text'],"曲真儀")!=false||strripos($message['text'],"曲真儀")!=false){   //stripos("Hello world!","WO") ;
-                     $m_message="是北七";
+                     $m_message=strripos($message['text'],"曲真儀")."<-第一次,最後一次->".stripos($message['text'],"曲真儀");
                     } 
                     else{
                     switch($bbbb){
