@@ -67,6 +67,9 @@ foreach ($client->parseEvents() as $event) {
                         生死怎問
                         笑由人　誰過問誰過問";
                     }
+                    if (strpos ($message['text'], "曲真儀")){
+                     $m_message="是北七";
+                    } 
                 	if($m_message!="")
                 	{
                 		$client->replyMessage(array(
