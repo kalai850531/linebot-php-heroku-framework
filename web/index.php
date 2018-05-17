@@ -27,7 +27,8 @@ foreach ($client->parseEvents() as $event) {
                 case 'text':
                 	$m_message = $message['text'];
                 	if($m_message!="")
-                	{
+                	{   
+                        if($message['text']!="主系選修"){
                 		$client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
                         'messages' => array(
@@ -35,7 +36,8 @@ foreach ($client->parseEvents() as $event) {
                                 'type' => 'text',
                                 'text' => $m_message
                             )
-                        )
+                         )
+                        }
                     	));
                 	}
                     break;
