@@ -70,6 +70,18 @@ foreach ($client->parseEvents() as $event) { //接收憑證
                    /* else if (stripos($message['text'],"曲真儀")!="")){   //stripos("Hello world!","WO") ;
                      $m_message=strripos($message['text'],"曲真儀")."<-第一次,最後一次->".stripos($message['text'],"曲真儀");
                     } */
+                     else  if (strtolower($message['text']) == "image" || $message['text'] == "圖片"){
+                        $client->replyMessage(array(
+                                         'replyToken' => $event['replyToken'],
+                                        'messages' => array(
+                                   array(
+                   'type' => 'image', // 訊息類型 (圖片)
+                'originalContentUrl' => 'https://api.reh.tw/line/bot/example/assets/images/example.jpg', // 回復圖片
+                'previewImageUrl' => 'https://api.reh.tw/line/bot/example/assets/images/example.jpg' // 回復的預覽圖片
+            )
+        )
+    ));
+                    }
                     else{
                     switch($bbbb){
                         case '0':
@@ -89,18 +101,6 @@ foreach ($client->parseEvents() as $event) { //接收憑證
                           break;
                     }
                  }
-                    if (strtolower($message['text']) == "image" || $message['text'] == "圖片"){
-                        $client->replyMessage(array(
-                                         'replyToken' => $event['replyToken'],
-                                        'messages' => array(
-                                   array(
-                   'type' => 'image', // 訊息類型 (圖片)
-                'originalContentUrl' => 'https://api.reh.tw/line/bot/example/assets/images/example.jpg', // 回復圖片
-                'previewImageUrl' => 'https://api.reh.tw/line/bot/example/assets/images/example.jpg' // 回復的預覽圖片
-            )
-        )
-    ));
-                    }
                 	if($m_message!="")
                 	{
                 		$client->replyMessage(array(
