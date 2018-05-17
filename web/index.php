@@ -24,16 +24,16 @@ $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 　"2"=>"紅心A"
 );*/
 $bbbb=rand(0,4);
-foreach ($client->parseEvents() as $event) {
-    switch ($event['type']) {
-        case 'message':
-            $message = $event['message'];
-            switch ($message['type']) {
-                case 'text':
-                    if($message['text']=="我"||$message['text']=="主系選修"){
+foreach ($client->parseEvents() as $event) { //接收憑證
+    switch ($event['type']) {          //判斷傳回資料型態
+        case 'message':                     //如果有訊息                 //$message['text'] 接收到的資料會儲存在這邊
+            $message = $event['message'];           //將資料存入陣列   //$m_message['text']=將你們要秀出的資料存進的變數
+            switch ($message['type']) {         
+                case 'text':                //如果有文字訊息
+                    if($message['text']=="我"||$message['text']=="主系選修"){                //條件式
                         $m_message="電子商務概論,行銷管理,服務創新概論.消費者行為,網路行銷,網路廣告";
                     }
-                    if($message['text']=="幹"||$message['text']=="三小"||$message['text']=="靠北"){
+                    else if($message['text']=="幹"||$message['text']=="三小"||$message['text']=="靠北"){
                         $m_message="罵三小";
                     }
                     else if($message['text']=="我是老二"||$message['text']=="嘎嘎"||$message['text']=="yee"||$message['text']=="甲偉"){
@@ -73,7 +73,7 @@ foreach ($client->parseEvents() as $event) {
                     else{
                     switch($bbbb){
                         case '0':
-                            $m_message=$message['text'];
+                            $m_message=$message['text']; //秀出的資料是你輸入的資料
                          break;
                         case '1':
                             $m_message="幹你詹凱威";
@@ -103,7 +103,6 @@ foreach ($client->parseEvents() as $event) {
                     	));
                 	}
                     break;
-                
             }
             break;
         default:
