@@ -21,13 +21,14 @@ $channelSecret = getenv('LINE_CHANNEL_SECRET');
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 $addr;
     function atext($atext){
+        $m_message="132";
         foreach ($client->parseEvents() as $event) {
           $client->replyMessage(array(
          'replyToken' => $event['replyToken'],
          'messages' => array(
             array(
               'type' => 'text',
-              'text' => $atext
+              'text' => $m_message
               )
              )
           ));        
