@@ -20,20 +20,6 @@ $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 $addr;
-    function atext($atext,$a,$channelAccessToken,$channelSecret){
-        $client = $a;
-        foreach ($client->parseEvents() as $event) {
-          $client->replyMessage(array(
-         'replyToken' => $event['replyToken'],
-         'messages' => array(
-            array(
-              'type' => 'text',
-              'text' => $m_message
-              )
-             )
-          ));     
-        };
-    }
 foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
         case 'message':
@@ -110,8 +96,8 @@ foreach ($client->parseEvents() as $event) {
                            'messages' => array(
                               array(
                           'type' => 'video', // 訊息類型 (影片)
-                             'originalContentUrl' => 'https://api.reh.tw/line/bot/example/assets/videos/example.mp4', // 回復影片
-                                'previewImageUrl' => 'https://api.reh.tw/line/bot/example/assets/images/example.jpg' // 回復的預覽圖片
+                             'originalContentUrl' => 'https://drive.google.com/open?id=1fS-tuqUWUQ2uIaLHn3omzla0OlvFQ5rq', // 回復影片
+                                'previewImageUrl' => 'https://drive.google.com/open?id=1fS-tuqUWUQ2uIaLHn3omzla0OlvFQ5rq' // 回復的預覽圖片
                              )
                             )
                         ));
