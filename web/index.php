@@ -90,14 +90,14 @@ foreach ($client->parseEvents() as $event) {
                               )
                           ));
                     }
-                    else if($message['text']=="測試"){
+                    else if($message['text']=="瑜珈"){
                         $client->replyMessage(array(
                            'replyToken' => $event['replyToken'],
                            'messages' => array(
                               array(
                           'type' => 'video', // 訊息類型 (影片)
-                             'originalContentUrl' => 'https://drive.google.com/open?id=1fS-tuqUWUQ2uIaLHn3omzla0OlvFQ5rq', // 回復影片
-                                'previewImageUrl' => 'https://drive.google.com/open?id=1fS-tuqUWUQ2uIaLHn3omzla0OlvFQ5rq' // 回復的預覽圖片
+                             'originalContentUrl' => 'https://github.com/kalai850531/linebot-php-heroku-framework/blob/master/video/LINE_V20180518_153104613.mp4', // 回復影片
+                                'previewImageUrl' => 'https://github.com/kalai850531/linebot-php-heroku-framework/blob/master/video/LINE_V20180518_153104613.mp4' // 回復的預覽圖片
                              )
                             )
                         ));
