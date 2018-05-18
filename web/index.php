@@ -19,6 +19,7 @@ require_once('./LINEBotTiny.php');
 $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
+$addr;
 foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
         case 'message':
@@ -38,21 +39,34 @@ foreach ($client->parseEvents() as $event) {
                         )
                     	));
                 	}
-                    else if($m_message!="")
+                    else if($message['text']=="學分抵免辦法")
                 	{
+                		$m_message="
+                        學分抵免辦法：
+                        碩士班新生入學前先修碩士課程成績七十分以上，且其課程未列入大學部畢業學分數者。
+                        博士班新生入學前先修博士課程成績七十分以上，且其課程未列入碩士班畢業學分數者 
+                        抵免科目學分原則：
+                        一、科目名稱與授課內容相同者。
+                        二、科目名稱有異但授課內容相同者。
+                        三、科目名稱與授課內容有異但性質相同者。";
+                	}
+                    else if($message['text']=="畢業門檻"||$message['text']=="主系選修"||$message['text']=="輔系選修"||$message['text']=="畢業門檻"||)
+                	{
+                      switch($message['text']){
+                              case '畢業門檻':
+                              $m_message="https://i.imgur.com/MNdSdjN.png";
+                              break;
+                      }
                 	  $client->replyMessage(array(
                           'replyToken' => $event['replyToken'],
                           'messages' => array(
                             array(
-                             if($message['text']=="畢業門檻"){
                                 'type' => 'image', // 訊息類型 (圖片)
-                                'originalContentUrl' => 'https://i.imgur.com/MNdSdjN.png', // 回復圖片
-                                'previewImageUrl' => 'https://i.imgur.com/MNdSdjN.png', // 回復的預覽圖片
-                             }
+                                'originalContentUrl' => $m_message, // 回復圖片
+                                'previewImageUrl' => $m_message // 回復的預覽圖片
                             )
                             )
                       ));
-     
                 	}
                     break;
                 
