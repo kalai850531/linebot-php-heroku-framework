@@ -105,7 +105,16 @@ foreach ($client->parseEvents() as $event) {
                           ));
                     }
                     else if($message['text']=="測試"){
-                        atext("測試成功",$client,$channelAccessToken,$channelSecret);
+                        $client->replyMessage(array(
+                           'replyToken' => $event['replyToken'],
+                           'messages' => array(
+                              array(
+                          'type' => 'video', // 訊息類型 (影片)
+                             'originalContentUrl' => 'https://api.reh.tw/line/bot/example/assets/videos/example.mp4', // 回復影片
+                                'previewImageUrl' => 'https://api.reh.tw/line/bot/example/assets/images/example.jpg' // 回復的預覽圖片
+                             )
+                            )
+                        ));
                     }
                     else
                 	{
