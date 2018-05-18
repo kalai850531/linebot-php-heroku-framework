@@ -69,16 +69,16 @@ foreach ($client->parseEvents() as $event) {
                               )
                           ));
                     }
-                    else if ($message['text'] == "甲偉"||$message['text'] == "嘉偉"||$message['text'] == "異形"||$message['text'] == "幹"||$message['text'] == "操"||$message['text'] == "靠北"){
+                    else if ($message['text'] == "甲偉"||$message['text'] == "嘉偉"||$message['text'] == "異形"||$message['text'] == "2"||||$message['text'] == "低能兒"$message['text'] == "幹"||$message['text'] == "操"||$message['text'] == "靠北"){
                           if($message['text'] == "甲偉"){
                              $m_message='https://i.imgur.com/xpSXRyU.jpg';
-                          }
-                          else if($message['text'] == "嘉偉"){
-                             $m_message='https://i.imgur.com/LsQlPpx.jpg';
                           }
                           else if($message['text'] == "低能兒"||$message['text'] == "2"||$message['text'] == "柏任"){
                              $m_message='https://i.imgur.com/IKN7aIh.png';
                           }
+                          else{
+                             $m_message='https://i.imgur.com/LsQlPpx.jpg';
+                          }       
                           $client->replyMessage(array(
                          'replyToken' => $event['replyToken'],
                          'messages' => array(
