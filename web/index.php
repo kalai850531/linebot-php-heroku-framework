@@ -48,9 +48,15 @@ foreach ($client->parseEvents() as $event) {
                     	));
                 	}
               //   else if($message['text']=="畢業門檻"||$message['text']=="主系選修"||$message['text']=="輔系選修"||$message['text']=="畢業門檻"||)
-                	else if ($message['text'] != "學分抵免辦法"){
+                	else if ($message['text'] == "學分抵免辦法"||$message['text'] == "輔系選修"||$message['text'] == "主系選修"){
                           if($message['text'] == "畢業門檻"){
-                          $m_message='https://api.reh.tw/line/bot/example/assets/images/example.jpg';
+                             $m_message='https://i.imgur.com/MNdSdjN.png';
+                          }
+                          else if($message['text'] == "輔系選修"){
+                             $m_message='https://i.imgur.com/NMHxbzT.jpg';
+                          }
+                          else if($message['text'] == "主系選修"){
+                             $m_message='https://i.imgur.com/A2waBEA.jpg';
                           }
                           $client->replyMessage(array(
                          'replyToken' => $event['replyToken'],
