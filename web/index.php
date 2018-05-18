@@ -47,7 +47,7 @@ foreach ($client->parseEvents() as $event) {
                         )
                     	));
                 	}
-                 /*else if($message['text']=="畢業門檻"||$message['text']=="主系選修"||$message['text']=="輔系選修"||$message['text']=="畢業門檻"||)
+                 else if($message['text']=="畢業門檻"||$message['text']=="主系選修"||$message['text']=="輔系選修"||$message['text']=="畢業門檻"||)
                 	{
                          $client->replyMessage(array(
                           'replyToken' => $event['replyToken'],
@@ -59,7 +59,7 @@ foreach ($client->parseEvents() as $event) {
                                  )
                                 )
                         ));
-                	}*/
+                	}
                    
                     break;                
             }
