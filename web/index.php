@@ -40,7 +40,7 @@ foreach ($client->parseEvents() as $event) {
                 	}
                     else if($m_message=="主系選修")
                 	{
-                		 $client->replyMessage(array(
+                	  $client->replyMessage(array(
                           'replyToken' => $event['replyToken'],
                           'messages' => array(
                             array(
@@ -49,7 +49,16 @@ foreach ($client->parseEvents() as $event) {
                            'previewImageUrl' => 'https://i.imgur.com/MNdSdjN.png' // 回復的預覽圖片
                              )
                              )
-                    	));
+                      ));
+                      $client->replyMessage(array(
+                        'replyToken' => $event['replyToken'],
+                        'messages' => array(
+                            array(
+                                'type' => 'text',
+                                'text' => $m_message
+                            )
+                        )
+                      ));
                 	}
                     break;
                 
