@@ -38,17 +38,17 @@ foreach ($client->parseEvents() as $event) {
                         )
                     	));
                 	}
-                    else if($m_message=="主系選修")
+                    else if($m_message!="")
                 	{
                 	  $client->replyMessage(array(
                           'replyToken' => $event['replyToken'],
                           'messages' => array(
                             array(
-                           'type' => 'image', // 訊息類型 (圖片)
-                           'originalContentUrl' => 'https://i.imgur.com/MNdSdjN.png', // 回復圖片
-                           'previewImageUrl' => 'https://i.imgur.com/MNdSdjN.png', // 回復的預覽圖片
-                           'type2' => 'text',
-                           'text' => $m_message   
+                             if($message['text']=="畢業門檻"){
+                                'type' => 'image', // 訊息類型 (圖片)
+                                'originalContentUrl' => 'https://i.imgur.com/MNdSdjN.png', // 回復圖片
+                                'previewImageUrl' => 'https://i.imgur.com/MNdSdjN.png', // 回復的預覽圖片
+                             }
                             )
                             )
                       ));
