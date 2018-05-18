@@ -45,8 +45,8 @@ foreach ($client->parseEvents() as $event) {
                           'messages' => array(
                             array(
                            'type' => 'image', // 訊息類型 (圖片)
-                           'originalContentUrl' => 'https://imgur.com/9XLthv8', // 回復圖片
-                           'previewImageUrl' => 'https://imgur.com/9XLthv8' // 回復的預覽圖片
+                           'originalContentUrl' => 'https://imgur.com/MNdSdjN', // 回復圖片
+                           'previewImageUrl' => 'https://imgur.com/MNdSdjN' // 回復的預覽圖片
                              )
                              )
                     	));
