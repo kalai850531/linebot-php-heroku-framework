@@ -20,8 +20,8 @@ $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 $addr;
-    function atext($atext,$client,$channelAccessToken,$channelSecret){
-        $client = new LINEBotTiny($channelAccessToken, $channelSecret);
+    function atext($atext,$a,$channelAccessToken,$channelSecret){
+        $client = $a;
         foreach ($client->parseEvents() as $event) {
           $client->replyMessage(array(
          'replyToken' => $event['replyToken'],
