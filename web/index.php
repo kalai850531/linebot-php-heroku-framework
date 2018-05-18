@@ -48,8 +48,10 @@ foreach ($client->parseEvents() as $event) {
                     	));
                 	}
               //   else if($message['text']=="畢業門檻"||$message['text']=="主系選修"||$message['text']=="輔系選修"||$message['text']=="畢業門檻"||)
-                	else if (strtolower($message['text']) == "image" || $message['text'] == "圖片"){
+                	else if ($message['text'] != "學分抵免辦法"){
+                          if($message['text'] == "畢業門檻"){
                           $m_message='https://api.reh.tw/line/bot/example/assets/images/example.jpg';
+                          }
                           $client->replyMessage(array(
                          'replyToken' => $event['replyToken'],
                          'messages' => array(
