@@ -46,19 +46,13 @@ foreach ($client->parseEvents() as $event) {
                             array(
                            'type' => 'image', // 訊息類型 (圖片)
                            'originalContentUrl' => 'https://i.imgur.com/MNdSdjN.png', // 回復圖片
-                           'previewImageUrl' => 'https://i.imgur.com/MNdSdjN.png' // 回復的預覽圖片
-                             )
-                             )
-                      ));
-                      $client->replyMessage(array(
-                        'replyToken' => $event['replyToken'],
-                        'messages' => array(
-                            array(
-                                'type' => 'text',
-                                'text' => $m_message
+                           'previewImageUrl' => 'https://i.imgur.com/MNdSdjN.png', // 回復的預覽圖片
+                           'type' => 'text',
+                           'text' => $m_message   
                             )
-                        )
+                            )
                       ));
+     
                 	}
                     break;
                 
