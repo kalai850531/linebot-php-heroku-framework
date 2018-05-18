@@ -49,19 +49,16 @@ foreach ($client->parseEvents() as $event) {
                 	}
                  else if($message['text']=="畢業門檻"||$message['text']=="主系選修"||$message['text']=="輔系選修"||$message['text']=="畢業門檻"||)
                 	{
-                    /*  if($message['text']=="畢業門檻"){
-                              $m_message="https://i.imgur.com/MNdSdjN.png";
-                      }*/
-                	  $client->replyMessage(array(
+                         $client->replyMessage(array(
                           'replyToken' => $event['replyToken'],
                           'messages' => array(
-                            array(
-                                'type' => 'image', // 訊息類型 (圖片)
-                                'originalContentUrl' => 'https://i.imgur.com/MNdSdjN.png', // 回復圖片
-                                'previewImageUrl' => 'https://i.imgur.com/MNdSdjN.png' // 回復的預覽圖片
-                            )
-                            )
-                      ));
+                              array(
+                            'type' => 'image', // 訊息類型 (圖片)
+                            'originalContentUrl' => 'https://api.reh.tw/line/bot/example/assets/images/example.jpg', // 回復圖片
+                             'previewImageUrl' => 'https://api.reh.tw/line/bot/example/assets/images/example.jpg' // 回復的預覽圖片
+                                 )
+                                )
+                        ));
                 	}
                     break;
                 
