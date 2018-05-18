@@ -96,7 +96,7 @@ foreach ($client->parseEvents() as $event) {
                            'messages' => array(
                               array(
                           'type' => 'video', // 訊息類型 (影片)
-                             'originalContentUrl' => 'https://www.youtube.com/embed/8lDWSfAgjhY', // 回復影片
+                             'originalContentUrl' => 'https://ruilin.ddns.net/123.mp4', // 回復影片
                                 'previewImageUrl' => 'https://i.imgur.com/IKN7aIh.png' // 回復的預覽圖片
                              )
                             )
