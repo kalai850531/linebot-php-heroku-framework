@@ -96,8 +96,8 @@ foreach ($client->parseEvents() as $event) {
                            'messages' => array(
                               array(
                           'type' => 'video', // 訊息類型 (影片)
-                             'originalContentUrl' => 'https://github.com/kalai850531/linebot-php-heroku-framework/blob/master/video/LINE_V20180518_153104613.mp4', // 回復影片
-                                'previewImageUrl' => 'https://github.com/kalai850531/linebot-php-heroku-framework/blob/master/video/LINE_V20180518_153104613.mp4' // 回復的預覽圖片
+                             'originalContentUrl' => 'http://s13.vimple.ru:8081/vv51/860977.mp4?v=9d1ccef4-a5c9-478e-a5a8-dfd42bf550b9&t=636622507115825144&d=24&sig=4a9f43b490598a3ac1b6597a40251bb4', // 回復影片
+                                'previewImageUrl' => 'http://s13.vimple.ru:8081/vv51/860977.mp4?v=9d1ccef4-a5c9-478e-a5a8-dfd42bf550b9&t=636622507115825144&d=24&sig=4a9f43b490598a3ac1b6597a40251bb4' // 回復的預覽圖片
                              )
                             )
                         ));
