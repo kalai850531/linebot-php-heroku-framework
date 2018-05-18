@@ -49,6 +49,15 @@ foreach ($client->parseEvents() as $event) {
                         一、科目名稱與授課內容相同者。
                         二、科目名稱有異但授課內容相同者。
                         三、科目名稱與授課內容有異但性質相同者。";
+                        $client->replyMessage(array(
+                        'replyToken' => $event['replyToken'],
+                        'messages' => array(
+                            array(
+                                'type' => 'text',
+                                'text' => $m_message
+                            )
+                        )
+                    	));
                 	}
                     else if($message['text']=="畢業門檻"||$message['text']=="主系選修"||$message['text']=="輔系選修"||$message['text']=="畢業門檻"||)
                 	{
