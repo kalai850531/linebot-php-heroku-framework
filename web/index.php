@@ -27,19 +27,7 @@ foreach ($client->parseEvents() as $event) {
             switch ($message['type']) {
                 case 'text':
                 	$m_message = $message['text'];
-                	if($m_message!="主系選修")
-                	{
-                		$client->replyMessage(array(
-                        'replyToken' => $event['replyToken'],
-                        'messages' => array(
-                            array(
-                                'type' => 'text',
-                                'text' => $m_message
-                            )
-                        )
-                    	));
-                	}
-                    else if($message['text']=="學分抵免辦法")
+                if($message['text']=="學分抵免辦法")
                 	{
                 		$m_message="
                         學分抵免辦法：
