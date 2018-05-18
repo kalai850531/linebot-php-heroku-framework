@@ -20,6 +20,17 @@ $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 $addr;
+function atext($atext){
+         $client->replyMessage(array(
+         'replyToken' => $event['replyToken'],
+         'messages' => array(
+            array(
+              'type' => 'text',
+              'text' => $atext
+              )
+             )
+          ));        
+}
 foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
         case 'message':
@@ -90,7 +101,10 @@ foreach ($client->parseEvents() as $event) {
                               )
                           ));
                     }
-                   else
+                    else if($message['text']=="測試"){
+                        atext("測試成功");
+                    }
+                    else
                 	{
                 		$m_message=$message['text'];
                         $client->replyMessage(array(
