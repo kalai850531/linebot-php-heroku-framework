@@ -76,7 +76,7 @@ foreach ($client->parseEvents() as $event) {
                           else if($message['text'] == "低能兒"||$message['text'] == "2"||$message['text'] == "柏任"){
                              $m_message='https://i.imgur.com/IKN7aIh.png';
                           }
-                          else if($message['text'] == "已知用火"){
+                          else if($message['text'] == "已知用火"&&$message['text']!= "瑜珈"){
                              $m_message='https://ruilin.ddns.net/img/peien.jpg';
                           }
                           else{
