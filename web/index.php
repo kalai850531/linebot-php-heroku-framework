@@ -69,14 +69,14 @@ foreach ($client->parseEvents() as $event) {
                               )
                           ));
                     }
-                    else if ($message['text'] !=""){
+                    else if ($message['text'] !=""&&$message['text']!= "瑜珈"){
                           if($message['text'] == "甲偉"){
                              $m_message='https://i.imgur.com/xpSXRyU.jpg';
                           }
                           else if($message['text'] == "低能兒"||$message['text'] == "2"||$message['text'] == "柏任"){
                              $m_message='https://i.imgur.com/IKN7aIh.png';
                           }
-                          else if($message['text'] == "已知用火"&&$message['text']!= "瑜珈"){
+                          else if($message['text'] == "已知用火"){
                              $m_message='https://ruilin.ddns.net/img/peien.jpg';
                           }
                           else{
