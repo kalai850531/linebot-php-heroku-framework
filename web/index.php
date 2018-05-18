@@ -77,7 +77,7 @@ foreach ($client->parseEvents() as $event) {
                              $m_message='https://i.imgur.com/IKN7aIh.png';
                           }
                           else if($message['text'] == "已知用火"){
-                             $m_message='https://ruilin.ddns.net/img/peien.jpg';
+                             $m_message='https://imgur.com/aGRk8bW';
                           }
                           else{
                              $m_message='https://i.imgur.com/LsQlPpx.jpg';
