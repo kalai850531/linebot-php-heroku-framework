@@ -49,10 +49,8 @@ foreach ($client->parseEvents() as $event) {
                 	}
                  else if($message['text']=="畢業門檻"||$message['text']=="主系選修"||$message['text']=="輔系選修"||$message['text']=="畢業門檻"||)
                 	{
-                      switch($message['text']){
-                              case '畢業門檻':
+                      if($message['text']=="畢業門檻"){
                               $m_message="https://i.imgur.com/MNdSdjN.png";
-                              break;
                       }
                 	  $client->replyMessage(array(
                           'replyToken' => $event['replyToken'],
