@@ -105,7 +105,7 @@ foreach ($client->parseEvents() as $event) {
                           ));
                     }
                     else if($message['text']=="測試"){
-                        atext("測試成功",$client);
+                        atext("測試成功",$client,$channelAccessToken,$channelSecret);
                     }
                     else
                 	{
