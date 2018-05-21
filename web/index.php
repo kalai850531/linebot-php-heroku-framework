@@ -80,10 +80,10 @@ foreach ($client->parseEvents() as $event) {
                              $m_message='https://ruilin.ddns.net/img/h2.jpg';
                           }
                           else if($message['text'] == "羅天祥"){
-                             $m_message='https://ruilin.ddns.net/img/h.jpg';
+                             $m_message='https://i.imgur.com/uAhmWHv.jpg';
                           }
                           else if($message['text'] == "高振瑋"||$message['text']=="港仔"){
-                             $m_message='https://i.imgur.com/aGRk8bW.jpg';
+                             $m_message='https://i.imgur.com/iSmFrx1.jpg';
                           }
                           else{
                              $m_message='https://i.imgur.com/LsQlPpx.jpg';
