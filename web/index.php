@@ -121,7 +121,25 @@ http://www.nuu.edu.tw/UIPWeb/wSite/np?ctNode=25502&mp=26&idPath=23734_23780";
                           ),
                           ),
                         ));
-                    }//pic if  
+                    }//pic==f if
+                    else if($pic=="true"){
+                           switch($message['text']){
+                               case 'E1':
+                                   $m_message='https://i.imgur.com/HWbJV1u.jpg';
+                                   break;
+                                
+                           }
+                        $client->replyMessage(array(
+                         'replyToken' => $event['replyToken'],
+                         'messages' => array(
+                         array(
+                         'type' => 'image', // 訊息類型 (圖片)
+                          'originalContentUrl' => $m_message, // 回復圖片
+                          'previewImageUrl' => $m_message // 回復的預覽圖片
+                             )
+                             )
+                          ));       
+                    }//pic==true
                 }//type sw
             /*    	else if ($message['text'] == "A"||$message['text'] == "輔系選修"||$message['text'] == "主系選修"){
                           if($message['text'] == "A"){
