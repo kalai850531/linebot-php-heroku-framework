@@ -159,6 +159,7 @@ http://www.nuu.edu.tw/UIPWeb/wSite/np?ctNode=25502&mp=26&idPath=23734_23780";
                            'originalContentUrl' => $m_message, // 回復圖片
                            'previewImageUrl' => $m_message // 回復的預覽圖片
                            )
+                          ),
                         ));       
                     }//pic==true
                 }//type sw
