@@ -20,7 +20,17 @@ $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 $addr;
-$m_message="請假
+
+foreach ($client->parseEvents() as $event) {
+    switch ($event['type']) {
+        case 'message':
+            $message = $event['message'];
+            switch ($message['type']) {
+                case 'text':
+                	$m_message = $message['text'];
+                if($message['text']=="目錄")
+                	{
+                	$m_message="請假
 A請假規定
 畢業門檻
 B1學分
@@ -51,32 +61,6 @@ F2實習請假
 F3實習報告
 F4實習成績計算
 flower􏿿生涯規劃";
-$client->replyMessage(array(
-'replyToken' => $event['replyToken'],
- 'messages' => array(
-     array(
-  'type' => 'text',
-    'text' => $m_message
-   )
-  )
-));
-foreach ($client->parseEvents() as $event) {
-    switch ($event['type']) {
-        case 'message':
-            $message = $event['message'];
-            switch ($message['type']) {
-                case 'text':
-                	$m_message = $message['text'];
-                if($message['text']=="學分抵免辦法")
-                	{
-                		$m_message="
-                        學分抵免辦法：
-                        碩士班新生入學前先修碩士課程成績七十分以上，且其課程未列入大學部畢業學分數者。
-                        博士班新生入學前先修博士課程成績七十分以上，且其課程未列入碩士班畢業學分數者 
-                        抵免科目學分原則：
-                        一、科目名稱與授課內容相同者。
-                        二、科目名稱有異但授課內容相同者。
-                        三、科目名稱與授課內容有異但性質相同者。";
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
                         'messages' => array(
