@@ -158,6 +158,7 @@ flower􏿿生涯規劃";
                           ));
                     }*/
                     break;                
+                    }
             break;
         default:
             error_log("Unsupporeted event type: " . $event['type']);
