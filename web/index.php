@@ -99,7 +99,11 @@ foreach ($client->parseEvents() as $event) {
                             array(
                                 'type' => 'text',
                                 'text' => $m_message
-                            )
+                            ),
+                                array(
+                                'type' => 'text',
+                                'text' => '這些都超好吃，真心不騙！',
+                            ),
                         )
                     	));
                 	}
