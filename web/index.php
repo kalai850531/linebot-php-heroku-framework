@@ -29,6 +29,7 @@ foreach ($client->parseEvents() as $event) {
                 case 'text':
                 	$m_message = $message['text'];
                     $m_message2 = $message['text'];
+                    $m_message3="";
                 if($message['text']!="")
                 	{
                     switch($message['text']){
@@ -103,6 +104,19 @@ http://www.bm.nuu.edu.tw/%E7%8F%AD%E7%B4%9A%E8%AA%B2%E8%A1%A8/";
                 	        $m_message="😌校外租屋相關資訊請至【聯合大學生輔組】的網頁查看或是點選下方的連結。
 http://www.nuu.edu.tw/UIPWeb/wSite/np?ctNode=25502&mp=26&idPath=23734_23780";
                             break;
+                            case 'F1':
+                	        $m_message="開課單位應於每年五月或十一月底前公告次學期或暑期校外實習課程之科目、實習機構名稱、擔任實習任課老師之名單及相關實習資訊，以供學生選課。學生須經家長同意後，方得選修校外實習課程。各開課單位並應於實習開始前召集學生舉辦行前座談會。􀄃􀆍moon grin􏿿";
+                            break;
+                            case 'F2':
+                	        $m_message="校外實習課程視同一般正常上課，學生請假需附證明文件，請假或缺勤者，需補足所缺之時數。由學校核准之公假，依校方核准文件向實習單位辦理請假手續。
+※不清楚學校請假規程序者，可輸入【A】或是【請假規定】以獲得相關內容。";
+                            break;
+                            case 'F3':
+                	        $m_message="在校外實習期間必須撰寫實習報告，報告之格式由開課單位自訂。實習過程中須定期撰寫工作報告，並於實習結束後撰寫完整之實習報告，分別送請實習單位主管及任課老師評閱。";
+                            break;
+                            case 'F4':
+                	        $m_message="校外實習成績計算由任課老師和實習單位主管共同核計，中其中任課老師考核成績佔50%，實習單位主管考核成績佔50%。";
+                            break;
                             default:
                                 $pic="true";
                             break;
@@ -126,8 +140,16 @@ http://www.nuu.edu.tw/UIPWeb/wSite/np?ctNode=25502&mp=26&idPath=23734_23780";
                            switch($message['text']){
                                case 'E1':
                                    $m_message='https://i.imgur.com/HWbJV1u.jpg';
+                                   $m_message2='';
                                    break;
-                                
+                               case 'E3':
+                                   $m_message='https://i.imgur.com/Tw2KMrm.jpg';
+                                   $m_message2='https://i.imgur.com/92dTrrm.jpg';
+                                   break;
+                               case 'E4':
+                                   $m_message='https://i.imgur.com/31PHuS3.jpg';
+                                   break;
+            
                            }
                         $client->replyMessage(array(
                          'replyToken' => $event['replyToken'],
@@ -140,7 +162,12 @@ http://www.nuu.edu.tw/UIPWeb/wSite/np?ctNode=25502&mp=26&idPath=23734_23780";
                            array(
                             'type' => 'image', // 訊息類型 (圖片)
                            'originalContentUrl' => $m_message, // 回復圖片
-                           'previewImageUrl' => $m_message // 回復的預覽圖片
+                           'previewImageUrl' => $m_message2 // 回復的預覽圖片
+                          ),
+                          array(
+                            'type' => 'image', // 訊息類型 (圖片)
+                           'originalContentUrl' => $m_message, // 回復圖片
+                           'previewImageUrl' => $m_message3 // 回復的預覽圖片
                           ),
                           ),
                         ));       
