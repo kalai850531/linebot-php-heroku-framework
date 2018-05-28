@@ -88,16 +88,20 @@ http://www.bm.nuu.edu.tw/%E8%BC%94%E7%B3%BB%E3%80%81%E9%9B%99%E4%B8%BB%E4%BF%AE%
                 	        $m_message="各班開課計劃所列必修科目必須在原班級或院系所規劃可修讀班級修習，但因重（補）修、或其他特殊原因而造成與其他必修科目衝堂，經系所主任核准後得修習其他學制或其他系所相近之必修科目。";
                             break;
                             case 'C10':
-                	        $m_message="C1";
+                	        $m_message="凡先修科目不及格或未修，不得選讀相關連續科目，其先修與續修科目之認定，由各系所另訂之。例如：沒修過會計學(一)，不可以直接選修會計學(二)
+※凡已修習及格之科目不得重選";
                             break;
                             case 'C11':
-                	        $m_message="C1";
+                	        $m_message="點選下方連結即可查詢：
+http://www.bm.nuu.edu.tw/%E5%85%A5%E5%AD%B8%E7%94%9F%E7%A7%91%E7%9B%AE%E8%A1%A8/";
                             break;
                             case 'C12':
-                	        $m_message="C1";
+                	        $m_message="點選下方連結即可查詢：
+http://www.bm.nuu.edu.tw/%E7%8F%AD%E7%B4%9A%E8%AA%B2%E8%A1%A8/";
                             break;
                             case 'D1':
-                	        $m_message="C1";
+                	        $m_message=":star:校外租屋相關資訊請至【聯合大學生輔組】的網頁查看或是點選下方的連結。
+http://www.nuu.edu.tw/UIPWeb/wSite/np?ctNode=25502&mp=26&idPath=23734_23780";
                             break;
                     }//sw case
                         $client->replyMessage(array(
