@@ -28,9 +28,11 @@ foreach ($client->parseEvents() as $event) {
             switch ($message['type']) {
                 case 'text':
                 	$m_message = $message['text'];
-                if($message['text']=="目錄")
+                if($message['text']=="目錄"||$message['text']=="B1")
                 	{
-                	$m_message="請假
+                    switch($message['text']){
+                            case "目錄":
+                	        $m_message="
 A請假規定
 畢業門檻
 B1學分
@@ -61,6 +63,16 @@ F2實習請假
 F3實習報告
 F4實習成績計算
 flower􏿿生涯規劃";
+                            break;
+                            case "B1"
+                                $m_message="
+                                1.學士班各學制學生選課每學期至少應修十五學分，至多不得超過二十五學分，修業期限最後一年（不含延修年限）每學期至少應修九學分。延修生或特別情況經系所、學院、學程主管同意者不受前述規定之限制。
+2.進修教育學生選課每學期至少應修九學分，至多不得超過二十五學分。
+3.各學制學生學期成績不及格科目之學分總數，達該學期修習學分總數二分之一者，次學期系主任得酌予要求降低修習學分總數。
+4.加修輔系、雙主修、學程之學生或前一學期成績平均達八十分以上之學生，每學期選課最高三十一學分。";
+                            breakl
+                    }
+                    else if()
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
                         'messages' => array(
@@ -72,9 +84,9 @@ flower􏿿生涯規劃";
                     	));
                 	}
               //   else if($message['text']=="畢業門檻"||$message['text']=="主系選修"||$message['text']=="輔系選修"||$message['text']=="畢業門檻"||)
-                	else if ($message['text'] == "畢業門檻"||$message['text'] == "輔系選修"||$message['text'] == "主系選修"){
-                          if($message['text'] == "畢業門檻"){
-                             $m_message='https://i.imgur.com/MNdSdjN.png';
+                	else if ($message['text'] == "A"||$message['text'] == "輔系選修"||$message['text'] == "主系選修"){
+                          if($message['text'] == "A"){
+                             $m_message='https://i.imgur.com/HWbJV1u.jpg';
                           }
                           else if($message['text'] == "輔系選修"){
                              $m_message='https://i.imgur.com/NMHxbzT.jpg';
@@ -93,7 +105,7 @@ flower􏿿生涯規劃";
                               )
                           ));
                     }
-                    else if ($message['text'] !=""&&$message['text']!= "瑜珈"){
+                    else if ($message['text'] !=""){
                           if($message['text'] == "甲偉"){
                              $m_message='https://i.imgur.com/xpSXRyU.jpg';
                           }
