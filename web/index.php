@@ -31,7 +31,7 @@ foreach ($client->parseEvents() as $event) {
                 if($message['text']=="目錄"||$message['text']=="B1")
                 	{
                     switch($message['text']){
-                            case 'B12':
+                            case "B12":
                 	        $m_message = "5";
                             break;
                         case 'B1':
@@ -43,7 +43,7 @@ foreach ($client->parseEvents() as $event) {
                             case 'C1':
                 	        $m_message="C1";
                             break;
-                            case 'C2':
+                            case "C2":
                 	        $m_message="C2";
                             break;
                     }//sw case
