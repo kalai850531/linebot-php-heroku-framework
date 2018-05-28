@@ -129,7 +129,7 @@ flower􏿿生涯規劃";
                               )
                           ));
                     }
-                    else if ($message['text'] !=""){
+            /*        else if ($message['text'] !=""){
                           if($message['text'] == "甲偉"){
                              $m_message='https://i.imgur.com/xpSXRyU.jpg';
                           }
@@ -183,9 +183,9 @@ flower􏿿生涯規劃";
                             )
                         )
                     	));
-                	}
+                	}*/
                     break;                
-            }
+            
             break;
         default:
             error_log("Unsupporeted event type: " . $event['type']);
