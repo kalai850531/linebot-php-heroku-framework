@@ -142,6 +142,16 @@ http://www.nuu.edu.tw/UIPWeb/wSite/np?ctNode=25502&mp=26&idPath=23734_23780";
                                case 'E1':
                                    $m_message='https://i.imgur.com/HWbJV1u.jpg';
                                    $m_message2='';
+                                       $client->replyMessage(array(
+                                        'replyToken' => $event['replyToken'],
+                                        'messages' => array(
+                                         array(
+                                         'type' => 'image', // 訊息類型 (圖片)
+                                          'originalContentUrl' => $m_message, // 回復圖片
+                                         'previewImageUrl' => $m_message // 回復的預覽圖片
+                                          )
+                                          ),
+                                        )); 
                                    break;
                                case 'E3':
                                    $m_message='https://i.imgur.com/Tw2KMrm.jpg';
@@ -152,7 +162,7 @@ http://www.nuu.edu.tw/UIPWeb/wSite/np?ctNode=25502&mp=26&idPath=23734_23780";
                                    break;
             
                            }
-                        $client->replyMessage(array(
+                       /* $client->replyMessage(array(
                          'replyToken' => $event['replyToken'],
                          'messages' => array(
                           array(
@@ -171,7 +181,7 @@ http://www.nuu.edu.tw/UIPWeb/wSite/np?ctNode=25502&mp=26&idPath=23734_23780";
                            'previewImageUrl' => $m_message3 // 回復的預覽圖片
                            ),
                           ),
-                        ));       
+                        ));       */
                     }//pic==true
                 }//type sw
                break;                
