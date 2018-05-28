@@ -34,7 +34,7 @@ foreach ($client->parseEvents() as $event) {
                             case "B12":
                 	        $m_message = "5";
                             break;
-                        case 'B1':
+                            case 'B1':
                                 $m_message="2";
                             break;       
                             case '目錄':
@@ -44,7 +44,7 @@ foreach ($client->parseEvents() as $event) {
                 	        $m_message="C1";
                             break;
                             case 'C2':
-                	        $m_message="C1";
+                	        $m_message="學生選課分初選及開學後加退選，初選於前一學期期末辦理，開學後加退選於開學第一、二週辦理，學生應於選課期間內完成選課。";
                             break;
                             case "C3":
                 	        $m_message="1.學生申請停修課程應於當學期行事曆規定之第十二週開始提出申請，申請期限為一週。
@@ -84,6 +84,15 @@ foreach ($client->parseEvents() as $event) {
                 	        $m_message="C1";
                             break;
                     }//sw case
+                        $client->replyMessage(array(
+                        'replyToken' => $event['replyToken'],
+                        'messages' => array(
+                            array(
+                                'type' => 'text',
+                                'text' => $m_message
+                            )
+                        )
+                    	));
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
                         'messages' => array(
