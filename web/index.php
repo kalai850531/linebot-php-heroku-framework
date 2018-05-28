@@ -86,26 +86,17 @@ foreach ($client->parseEvents() as $event) {
                     }//sw case
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
-                        'messages' => array(
-                            array(
-                                'type' => 'text',
-                                'text' => $m_message
-                            )
-                        )
-                    	));
-                        $client->replyMessage(array(
-                        'replyToken' => $event['replyToken'],
-                        'messages' => array(
-                            array(
-                                'type' => 'text',
-                                'text' => $m_message
-                            ),
-                                array(
-                                'type' => 'text',
-                                'text' => '這些都超好吃，真心不騙！',
-                            ),
-                        )
-                    	));
+                         'messages' => array(
+                               array(
+                                 'type' => 'text',
+                        'text' => $message['text'].'讓我想想喔…',
+                      ),
+                   array(
+                 'type' => 'text',
+                 'text' => '這些都超好吃，真心不騙！',
+                          ),
+                    ),
+                        ));
                 	}
             /*    	else if ($message['text'] == "A"||$message['text'] == "輔系選修"||$message['text'] == "主系選修"){
                           if($message['text'] == "A"){
