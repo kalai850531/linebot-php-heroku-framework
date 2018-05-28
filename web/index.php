@@ -28,7 +28,7 @@ foreach ($client->parseEvents() as $event) {
             switch ($message['type']) {
                 case 'text':
                 	$m_message = $message['text'];
-                if($message['text']=="目錄"||$message['text']=="B1")
+                if($message['text']!="")
                 	{
                     switch($message['text']){
                             case "目錄":
@@ -107,7 +107,6 @@ flower􏿿生涯規劃";
                         )
                     	));
                 	}
-              //   else if($message['text']=="畢業門檻"||$message['text']=="主系選修"||$message['text']=="輔系選修"||$message['text']=="畢業門檻"||)
                 	else if ($message['text'] == "A"||$message['text'] == "輔系選修"||$message['text'] == "主系選修"){
                           if($message['text'] == "A"){
                              $m_message='https://i.imgur.com/HWbJV1u.jpg';
@@ -129,7 +128,7 @@ flower􏿿生涯規劃";
                               )
                           ));
                     }
-            /*        else if ($message['text'] !=""){
+                    else if ($message['text'] !=""){
                           if($message['text'] == "甲偉"){
                              $m_message='https://i.imgur.com/xpSXRyU.jpg';
                           }
@@ -183,7 +182,7 @@ flower􏿿生涯規劃";
                             )
                         )
                     	));
-                	}*/
+                	}
                     break;                
             
             break;
