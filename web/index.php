@@ -40,6 +40,12 @@ foreach ($client->parseEvents() as $event) {
                             case '目錄':
                 	        $m_message="1";
                             break;
+                            case 'C1':
+                	        $m_message="C1";
+                            break;
+                            case 'C2':
+                	        $m_message="C2";
+                            break;
                     }//sw case
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
