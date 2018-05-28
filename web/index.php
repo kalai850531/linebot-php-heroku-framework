@@ -71,6 +71,9 @@ flower􏿿生涯規劃";
 3.各學制學生學期成績不及格科目之學分總數，達該學期修習學分總數二分之一者，次學期系主任得酌予要求降低修習學分總數。
 4.加修輔系、雙主修、學程之學生或前一學期成績平均達八十分以上之學生，每學期選課最高三十一學分。";
                             break;       
+                            case '目錄':
+                	        $m_message="1";
+                            break;
                     }//sw case
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
