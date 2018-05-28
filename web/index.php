@@ -19,7 +19,7 @@ require_once('./LINEBotTiny.php');
 $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
-$addr;
+$pic=false;
 
 foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
@@ -104,6 +104,7 @@ http://www.bm.nuu.edu.tw/%E7%8F%AD%E7%B4%9A%E8%AA%B2%E8%A1%A8/";
 http://www.nuu.edu.tw/UIPWeb/wSite/np?ctNode=25502&mp=26&idPath=23734_23780";
                             break;
                     }//sw case
+                    if($pic==false){
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
                          'messages' => array(
@@ -117,7 +118,8 @@ http://www.nuu.edu.tw/UIPWeb/wSite/np?ctNode=25502&mp=26&idPath=23734_23780";
                           ),
                           ),
                         ));
-                	}
+                    }//pic if  
+                }//type sw
             /*    	else if ($message['text'] == "A"||$message['text'] == "輔系選修"||$message['text'] == "主系選修"){
                           if($message['text'] == "A"){
                              $m_message='https://i.imgur.com/HWbJV1u.jpg';
