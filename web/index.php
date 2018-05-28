@@ -19,7 +19,7 @@ require_once('./LINEBotTiny.php');
 $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
-$pic=false;
+$pic="false";
 
 foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
@@ -103,8 +103,11 @@ http://www.bm.nuu.edu.tw/%E7%8F%AD%E7%B4%9A%E8%AA%B2%E8%A1%A8/";
                 	        $m_message="😌校外租屋相關資訊請至【聯合大學生輔組】的網頁查看或是點選下方的連結。
 http://www.nuu.edu.tw/UIPWeb/wSite/np?ctNode=25502&mp=26&idPath=23734_23780";
                             break;
+                            default:
+                                $pic="true";
+                            break;
                     }//sw case
-                    if($pic==false){
+                    if($pic=="false"){
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
                          'messages' => array(
