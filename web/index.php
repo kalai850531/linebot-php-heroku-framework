@@ -132,69 +132,24 @@ http://www.nuu.edu.tw/UIPWeb/wSite/np?ctNode=25502&mp=26&idPath=23734_23780";
                         $client->replyMessage(array(
                          'replyToken' => $event['replyToken'],
                          'messages' => array(
-                         array(
-                         'type' => 'image', // 訊息類型 (圖片)
-                          'originalContentUrl' => $m_message, // 回復圖片
-                          'previewImageUrl' => $m_message // 回復的預覽圖片
-                             )
-                             )
-                          ));       
+                          array(
+                           'type' => 'image', // 訊息類型 (圖片)
+                           'originalContentUrl' => $m_message, // 回復圖片
+                           'previewImageUrl' => $m_message // 回復的預覽圖片
+                           )
+                           ),
+                           array(
+                           'type' => 'image', // 訊息類型 (圖片)
+                           'originalContentUrl' => $m_message, // 回復圖片
+                           'previewImageUrl' => $m_message // 回復的預覽圖片
+                           ),
+                           ),
+                        ));       
                     }//pic==true
                 }//type sw
-            /*    	else if ($message['text'] == "A"||$message['text'] == "輔系選修"||$message['text'] == "主系選修"){
-                          if($message['text'] == "A"){
-                             $m_message='https://i.imgur.com/HWbJV1u.jpg';
-                          }
-                          else if($message['text'] == "輔系選修"){
-                             $m_message='https://i.imgur.com/NMHxbzT.jpg';
-                          }
-                          else if($message['text'] == "主系選修"){
-                             $m_message='https://i.imgur.com/A2waBEA.jpg';
-                          }
-                          $client->replyMessage(array(
-                         'replyToken' => $event['replyToken'],
-                         'messages' => array(
-                         array(
-                         'type' => 'image', // 訊息類型 (圖片)
-                            'originalContentUrl' => $m_message, // 回復圖片
-                          'previewImageUrl' => $m_message // 回復的預覽圖片
-                             )
-                              )
-                          ));
-                    }
-                    else if ($message['text'] !=""){
-                          if($message['text'] == "甲偉"){
-                             $m_message='https://i.imgur.com/xpSXRyU.jpg';
-                          }
-                          else if($message['text'] == "低能兒"||$message['text'] == "2"||$message['text'] == "柏任"){
-                             $m_message='https://i.imgur.com/IKN7aIh.png';
-                          }
-                          else if($message['text'] == "已知用火"){
-                             $m_message='https://i.imgur.com/aGRk8bW.jpg';
-                          }
-                          else if($message['text'] == "羅天祥"){
-                             $m_message='https://i.imgur.com/uAhmWHv.jpg';
-                          }
-                          else if($message['text'] == "高振瑋"||$message['text']=="港仔"){
-                             $m_message='https://i.imgur.com/iSmFrx1.jpg';
-                          }
-                          else{
-                             $m_message='https://i.imgur.com/LsQlPpx.jpg';
-                          }       
-                          $client->replyMessage(array(
-                         'replyToken' => $event['replyToken'],
-                         'messages' => array(
-                         array(
-                         'type' => 'image', // 訊息類型 (圖片)
-                            'originalContentUrl' => $m_message, // 回復圖片
-                          'previewImageUrl' => $m_message // 回復的預覽圖片
-                             )
-                              )
-                          ));
-                    }*/
-                    break;                
-                    }
-            break;
+               break;                
+            }
+         break;
         default:
             error_log("Unsupporeted event type: " . $event['type']);
             break;
