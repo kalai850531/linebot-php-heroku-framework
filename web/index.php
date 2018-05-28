@@ -70,9 +70,8 @@ flower􏿿生涯規劃";
 2.進修教育學生選課每學期至少應修九學分，至多不得超過二十五學分。
 3.各學制學生學期成績不及格科目之學分總數，達該學期修習學分總數二分之一者，次學期系主任得酌予要求降低修習學分總數。
 4.加修輔系、雙主修、學程之學生或前一學期成績平均達八十分以上之學生，每學期選課最高三十一學分。";
-                            breakl
-                    }
-                    else if()
+                            break;
+                    }//sw case
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
                         'messages' => array(
