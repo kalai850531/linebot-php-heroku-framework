@@ -28,7 +28,7 @@ foreach ($client->parseEvents() as $event) {
             switch ($message['type']) {
                 case 'text':
                 	$m_message = $message['text'];
-                if($message['text']!="")
+                if($message['text']=="目錄"||$message['text']=="B1")
                 	{
                     switch($message['text']){
                             case "目錄":
@@ -94,8 +94,7 @@ flower􏿿生涯規劃";
 3.停修課程每學期以一科為限。停修後，該學期修習學分仍應達最低應修學分數之規定。
 4.依規定應繳交學分數（學分學雜費）之課程停修後，其學分費（學分學雜費）已繳交者不予退費，未繳交者仍應補繳。
 5.學生有停修課程者，不得以該學期成績申請各種獎學金。";
-                            break;
-                                
+                            break;        
                     }//sw case
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
@@ -158,31 +157,6 @@ flower􏿿生涯規劃";
                               )
                           ));
                     }
-                    else if($message['text']=="瑜珈"){
-                        $client->replyMessage(array(
-                           'replyToken' => $event['replyToken'],
-                           'messages' => array(
-                              array(
-                          'type' => 'video', // 訊息類型 (影片)
-                             'originalContentUrl' => 'https://ruilin.ddns.net/123.mp4', // 回復影片
-                                'previewImageUrl' => 'https://i.imgur.com/IKN7aIh.png' // 回復的預覽圖片
-                             )
-                            )
-                        ));
-                    }
-                    else
-                	{
-                		$m_message=$message['text'];
-                        $client->replyMessage(array(
-                        'replyToken' => $event['replyToken'],
-                        'messages' => array(
-                            array(
-                                'type' => 'text',
-                                'text' => $m_message
-                            )
-                        )
-                    	));
-                	}
                     break;                
             
             break;
