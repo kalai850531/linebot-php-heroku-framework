@@ -20,6 +20,46 @@ $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 $addr;
+$m_message="請假
+A請假規定
+畢業門檻
+B1學分
+B2學群證書
+選課
+C1學分學程、學分學程申請
+C2加退選
+C3停修
+C4大學部的學生、研究所的課
+C5研究所的學生、大學部的課
+C6夜間部的課
+C7跨校選課
+C8選修(雙主修、輔系)
+C9跨班級修課
+C10選課
+C11入學生科目表
+C12課表
+flower􏿿住宿
+D1 校外租屋
+􏿿􏿿flower􏿿交通
+E1學校專車時間
+E2新竹客運
+E3苗栗客運
+E4高鐵快捷車
+flower􏿿實習
+F1實習資訊
+F2實習請假
+F3實習報告
+F4實習成績計算
+flower􏿿生涯規劃";
+$client->replyMessage(array(
+'replyToken' => $event['replyToken'],
+ 'messages' => array(
+     array(
+  'type' => 'text',
+    'text' => $m_message
+   )
+  )
+));
 foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
         case 'message':
