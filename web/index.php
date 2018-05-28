@@ -31,7 +31,7 @@ foreach ($client->parseEvents() as $event) {
                 if($message['text']=="目錄"||$message['text']=="B1")
                 	{
                     switch($message['text']){
-                            case '目錄':
+                            case 'B12':
                 	        $m_message="
 A請假規定
 畢業門檻
