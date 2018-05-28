@@ -20,7 +20,8 @@ $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 $pic="false";
-
+$m_message2='';
+$m_message3='';
 foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
         case 'message':
