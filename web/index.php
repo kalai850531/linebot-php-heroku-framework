@@ -28,7 +28,7 @@ foreach ($client->parseEvents() as $event) {
             switch ($message['type']) {
                 case 'text':
                 	$m_message = $message['text'];
-                if($message['text']=="目錄"||$message['text']=="B1")
+                if($message['text']!="")
                 	{
                     switch($message['text']){
                             case "B12":
