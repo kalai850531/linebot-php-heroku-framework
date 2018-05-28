@@ -100,7 +100,7 @@ http://www.bm.nuu.edu.tw/%E5%85%A5%E5%AD%B8%E7%94%9F%E7%A7%91%E7%9B%AE%E8%A1%A8/
 http://www.bm.nuu.edu.tw/%E7%8F%AD%E7%B4%9A%E8%AA%B2%E8%A1%A8/";
                             break;
                             case 'D1':
-                	        $m_message=":star:校外租屋相關資訊請至【聯合大學生輔組】的網頁查看或是點選下方的連結。
+                	        $m_message="😌校外租屋相關資訊請至【聯合大學生輔組】的網頁查看或是點選下方的連結。
 http://www.nuu.edu.tw/UIPWeb/wSite/np?ctNode=25502&mp=26&idPath=23734_23780";
                             break;
                     }//sw case
