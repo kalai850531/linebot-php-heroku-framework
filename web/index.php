@@ -43,8 +43,45 @@ foreach ($client->parseEvents() as $event) {
                             case 'C1':
                 	        $m_message="C1";
                             break;
-                            case "C2":
-                	        $m_message="C2";
+                            case 'C2':
+                	        $m_message="C1";
+                            break;
+                            case "C3":
+                	        $m_message="1.學生申請停修課程應於當學期行事曆規定之第十二週開始提出申請，申請期限為一週。
+2.停修課程仍須登記於該學期成績單及歷年成績表，於成績欄註明「停修」。停修課程之學分數不計入該學期所修學分總數。
+3.停修課程每學期以一科為限。停修後，該學期修習學分仍應達最低應修學分數之規定。
+4.依規定應繳交學分數（學分學雜費）之課程停修後，其學分費（學分學雜費）已繳交者不予退費，未繳交者仍應補繳。
+5.學生有停修課程者，不得以該學期成績申請各種獎學金。";
+                            break;
+                            case 'C4':
+                	        $m_message="C1";
+                            break;
+                            case 'C5':
+                	        $m_message="C1";
+                            break;
+                            case 'C6':
+                	        $m_message="C1";
+                            break;
+                            case 'C7':
+                	        $m_message="C1";
+                            break;
+                            case 'C8':
+                	        $m_message="C1";
+                            break;
+                            case 'C9':
+                	        $m_message="C1";
+                            break;
+                            case 'C10':
+                	        $m_message="C1";
+                            break;
+                            case 'C11':
+                	        $m_message="C1";
+                            break;
+                            case 'C12':
+                	        $m_message="C1";
+                            break;
+                            case 'D1':
+                	        $m_message="C1";
                             break;
                     }//sw case
                         $client->replyMessage(array(
