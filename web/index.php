@@ -106,7 +106,7 @@ flower􏿿生涯規劃";
                         )
                     	));
                 	}
-                	else if ($message['text'] == "A"||$message['text'] == "輔系選修"||$message['text'] == "主系選修"){
+            /*    	else if ($message['text'] == "A"||$message['text'] == "輔系選修"||$message['text'] == "主系選修"){
                           if($message['text'] == "A"){
                              $m_message='https://i.imgur.com/HWbJV1u.jpg';
                           }
@@ -156,9 +156,8 @@ flower􏿿生涯規劃";
                              )
                               )
                           ));
-                    }
+                    }*/
                     break;                
-            
             break;
         default:
             error_log("Unsupporeted event type: " . $event['type']);
